@@ -1,0 +1,133 @@
+/* components/home/homepage.module.css */
+
+/* Main layout */
+.mainContainer {
+    @apply min-h-screen justify-center items-center overflow-hidden relative;
+    background: linear-gradient(90deg, rgba(255, 199, 199, 1) 0%, rgba(10, 166, 215, 1) 100%);
+  }
+  
+  /* Header */
+  .header {
+    @apply bg-black bg-opacity-50 text-white flex justify-between items-center p-4 absolute top-0 left-0 right-0;
+  }
+  
+  /* Logo */
+  .logo {
+    @apply text-2xl font-bold;
+  }
+  
+  /* Visit website button */
+  .visitButton {
+    @apply bg-transparent text-white py-2 px-4 border border-white rounded cursor-pointer transition duration-300;
+  }
+  .visitButton:hover {
+    @apply bg-white text-black;
+  }
+  
+  /* Main content container */
+  .contentContainer {
+    @apply flex justify-center items-center p-8;
+  }
+  
+  /* Rectangle container */
+  .rectangleContainer {
+    @apply flex flex-row w-full mt-32 overflow-hidden;
+  }
+  
+  /* Left content */
+  .leftContent {
+    @apply flex-[64%] p-12 text-left;
+  }
+  
+  /* Main title */
+  .mainTitle {
+    @apply text-[2.5rem] font-bold mb-4 whitespace-nowrap overflow-hidden overflow-ellipsis text-white;
+  }
+  
+  /* Description */
+  .description {
+    @apply text-base mb-4 text-left text-white leading-relaxed;
+  }
+  
+  /* Free trial button */
+  .trialButton {
+    @apply absolute bg-[rgba(19,168,215,1)] text-white font-poppins py-4 px-8 border border-blue-600 rounded-none cursor-pointer mt-4 transition duration-300;
+  }
+  .trialButton:hover {
+    @apply bg-transparent text-[rgba(19,168,215,1)] border-[rgba(19,168,215,1)];
+  }
+  
+  /* Right content */
+  .rightContent {
+    @apply flex-[65%] flex justify-center items-center text-right h-96 mr-8;
+  }
+  
+  /* Video container */
+  .videoContainer {
+    @apply relative w-full h-full rounded-3xl overflow-hidden;
+  }
+  
+  /* Background SVG */
+  .backgroundSVG {
+    @apply absolute w-[33rem] mt-52 mr-[60rem];
+  }
+  
+  /* Video iframe */
+  .videoIframe {
+    @apply w-full h-full border-0;
+  }
+  
+  /* Media query for tablets and mobile devices */
+  @media (max-width: 768px) {
+    .rectangleContainer {
+      @apply flex-col items-center;
+    }
+  
+    .contentContainer {
+      @apply flex justify-center items-center p-0;
+    }
+  .mainContainer{
+    
+    @apply min-h-[84vh];
+  }
+    .rectangleContainer::before {
+      @apply top-0 left-0 w-full h-full border-0 opacity-100 rounded-none;
+    }
+  
+    .logo {
+      @apply transform scale-70;
+    }
+  
+    .header {
+      @apply text-white flex justify-between items-center p-1 absolute top-0 left-0 right-0;
+    }
+  
+    .backgroundSVG {
+      @apply absolute w-[14rem]  top-[-35rem] left-[-2rem]  ;
+    }
+  
+    .leftContent {
+      @apply transform scale-150 order-none w-full mb-[17rem] origin-center;;
+    }
+  
+    .mainTitle {
+      @apply text-[1.1rem]   text-center;
+    }
+  
+    .description {
+      @apply text-[0.8rem]  text-center ;
+    }
+  
+    .trialButton {
+      @apply rounded-none  left-[33%] transform scale-50;
+    }
+  
+    .rightContent {
+      @apply order-none absolute top-[40rem] max-h-0 h-[19rem] w-[27rem] mr-0;
+    }
+  
+    .videoContainer {
+      @apply relative w-full h-[16rem] rounded-[0] overflow-hidden top-[0rem];
+    }
+  }
+  

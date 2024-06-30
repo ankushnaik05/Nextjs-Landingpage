@@ -1,0 +1,92 @@
+/* components/features/featurespage.module.css */
+
+.mainContainer {
+    @apply overflow-hidden flex flex-col items-center justify-center bg-gray-200 min-h-[66vh];
+  }
+  
+  .headline {
+    @apply text-4xl font-bold text-center mb-4 font-poppins;
+    ;
+  }
+  
+  .subtitle {
+    @apply text-xl text-center mb-6 font-poppins;
+  }
+  
+  .exploreButton {
+    @apply bg-blue-500 text-white py-4 px-8 border-none rounded-md cursor-pointer flex items-center justify-center relative mb-8;
+  }
+  
+  .arrow {
+    @apply ml-2;
+  }
+  
+  .upArrow,
+  .downArrow {
+    @apply absolute right-4 opacity-0 transition-opacity duration-300 ease-in cursor-pointer;
+  }
+  
+  .upArrow {
+    @apply top-2;
+  }
+  
+  .downArrow {
+    @apply bottom-2;
+  }
+  
+  .exploreButton:hover .upArrow,
+  .exploreButton:hover .downArrow {
+    @apply opacity-100;
+  }
+  
+  .rectangleContainer {
+    @apply max-h-[28rem] w-[160%] bg-black shadow-md flex overflow-hidden items-center justify-center p-4 flex-1 mt-auto mb-4 relative   ;
+  }
+  
+  .imageContainer {
+    @apply flex items-center transition-transform duration-500 ease-in-out;
+  }
+  
+  .imageWrapper {
+    @apply w-[33.33%] px-2 flex-shrink-0 flex items-center justify-center transition-transform duration-500 ease-in-out origin-center relative ;
+  }
+  
+  .imageWrapper.active .imageSlide {
+    transform: scale(1.1) translateZ(-50px);
+  }
+  
+  .imageWrapper.prev .imageSlide {
+    transform: rotateY(30deg) translateZ(50px);
+  }
+  
+  .imageWrapper.next .imageSlide {
+    transform: rotateY(-30deg) translateZ(50px);
+  }
+  
+  .imageSlide {
+    @apply w-full h-auto relative top-8;
+  }
+  
+  .imageHeadline {
+    @apply absolute left-0 right-0 text-center text-2xl text-white z-10;
+    top: -1rem;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .mainContainer{
+        @apply min-h-[50vh];
+    }
+    .rectangleContainer {
+      @apply max-h-[12rem];
+    }
+    .headline {
+      @apply text-xl font-bold text-center mb-4;
+    }
+    .subtitle {
+      @apply text-base font-poppins text-center mb-6;
+    }
+    .imageHeadline{
+        @apply text-[0.9rem]
+    }
+  }
+  

@@ -1,0 +1,124 @@
+/* components/features/allfeatures.module.css */
+
+.container {
+    @apply bg-white p-[3rem];
+}
+
+.featuresContainer {
+    @apply grid grid-cols-auto-fill-300 gap-6;
+}
+
+.featureBox {
+    @apply relative p-4 rounded text-left bg-white transition duration-300 ease-in-out transform hover:bg-white hover:shadow-md;
+}
+
+.featureBox:hover .featureIcon,
+.featureBox:hover .featureTitle,
+.featureBox:hover .featureDescription {
+    @apply text-blue-900;
+}
+
+.featureIcon,
+.featureTitle,
+.featureDescription {
+    @apply transition duration-300 ease-in-out;
+}
+
+.featureIcon {
+    @apply w-12 h-12 mb-2;
+}
+
+.featureTitle {
+    @apply text-xl mb-2 text-gray-800;
+}
+
+.featureDescription {
+    @apply text-sm text-gray-600;
+}
+
+.promoContainer {
+    @apply bg-white rounded p-[2rem] flex justify-between items-center h-[8rem];
+}
+
+.promoText {
+    @apply text-left flex-1;
+}
+
+.promoTitle {
+    @apply absolute text-[1.8rem] mb-[1rem]  leading-8 w-[39rem] bottom-[-60rem] font-bold left-56  text-[rgb(31_41_55_/_var(--tw-text-opacity))] font-poppins;
+}
+
+.promoDescription {
+    @apply absolute mb-[1.5rem] text-base font-poppins text-[rgb(75_85_99_/_var(--tw-text-opacity))] font-bold left-[14rem];
+}
+
+.promoImage {
+    @apply flex-1 text-right;
+}
+
+.promoImage img {
+    @apply max-w-full ml-[11.2rem];
+}
+
+.promoButtonContainer {
+    @apply ml-8;
+}
+
+.okImage {
+    @apply ml-26 transform scale-40;
+}
+
+.promoButton {
+    @apply bg-blue-900 text-white border-none p-3 text-base cursor-pointer rounded;
+}
+
+.promoButton:hover {
+    @apply bg-transparent text-blue-900 border border-blue-900;
+}
+
+@media (max-width: 768px) {
+    .featuresContainer {
+        @apply flex overflow-hidden;
+    }
+
+    .featuresWrapper {
+        @apply flex animate-slide-left h-60 w-[75rem];
+    }
+
+    @keyframes slideLeft {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .promoContainer {
+        @apply flex flex-col items-center text-center p-0 relative top-[4rem];
+    }
+
+    .promoImage {
+        @apply relative top-[-3.8rem] left-[-148px] right-[29rem] w-[50rem] h-[14rem] object-cover;
+    }
+
+    .promoText {
+        @apply relative z-1 top-0 right-[-4rem];
+    }
+
+    .promoButtonContainer {
+        @apply my-4;
+    }
+
+    .promoButton {
+        @apply w-full relative top-[-13rem] right-[1rem];
+    }
+
+    .promoDescription {
+        @apply relative left-[-4rem] text-[0.8rem] mb-6 text-white w-[23rem] text-center relative  top-[1.5rem] font-poppins;
+    }
+
+    .promoTitle {
+        @apply text-xl left-[-5.1rem] text-white w-[25rem]  bottom-[1rem]  text-center font-poppins;
+    }
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+.faqContainer {
+  @apply p-5 text-center font-poppins;
+}
+
+.content {
+  @apply mx-auto max-w-6xl;
+}
+
+.title {
+  @apply text-2xl font-bold mb-5 text-gray-800;
+}
+
+.question {
+  @apply mb-5 relative font-poppins ;
+}
+
+.questionHeader {
+  @apply flex items-center justify-between py-2.5 cursor-pointer;
+}
+
+.questionText {
+  @apply text-[0.9rem] font-bold text-gray-800 font-poppins;
+}
+
+.arrow {
+  @apply w-[1rem] h-[0.5rem];
+}
+
+.line {
+  @apply absolute bottom-[-5px] left-0 right-0 h-[2px] bg-gray-300;
+}
+
+.answer {
+  @apply text-[0.8rem] text-gray-800 mt-2 text-left font-poppins; 
+}
